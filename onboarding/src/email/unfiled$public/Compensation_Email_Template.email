@@ -1,0 +1,12 @@
+A Compensation with Uruguay location was created here you have the details:</br>
+</br>
+Name: {!Compensation__c.Name} </br>
+</br>
+Created by: {!Compensation__c.CreatedBy}</br>
+</br>
+Date of creation: {!Compensation__c.CreatedDate}</br>
+</br>
+To access: {!Compensation__c.Link}</br>
+</br>
+
+Greetings...

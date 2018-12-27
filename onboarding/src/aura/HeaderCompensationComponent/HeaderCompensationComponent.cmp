@@ -1,0 +1,40 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="rtypes" type="String[]" default="All compensations,Salary,Study,Research"/>
+    
+    <div class="slds-page-header slds-page-header_record-home">
+        <div class="slds-page-header__row">
+            <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <lightning:icon iconName="action:description" alternativeText="Click to Call" size="small"/>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-page-header__name">
+                            <div class="slds-page-header__name-title">
+                                <h1>
+                                    <span class="slds-page-header__title slds-p-top_x-small" title="Compensation List View">Compensation List View</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-page-header__col-actions">
+                <div class="slds-page-header__control">
+                    <ul class="slds-button-group-list">
+                        <li>
+                            <lightning:select name="select">
+                                <aura:iteration items="{!v.rtypes}" var="rt">
+                                    <option text="{!rt}"></option>
+                                </aura:iteration>
+                            </lightning:select>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

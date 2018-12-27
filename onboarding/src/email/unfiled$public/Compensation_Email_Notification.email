@@ -1,0 +1,2 @@
+The {!Compensation__c.Name} was created by {!Compensation__c.CreatedBy}. You can see more info clicking here:
+{!Compensation__c.Link}

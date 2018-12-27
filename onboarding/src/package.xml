@@ -2,14 +2,19 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>*</members>
-        <name>ApprovalProcess</name>
+        <name>ApexClass</name>
     </types>
     <types>
-        <members>Compensation</members>
-        <name>CustomApplication</name>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
     </types>
     <types>
         <members>Compensation__c</members>
+        <members>Contact</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -17,32 +22,39 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>Public_Folder</members>
+        <members>Public_Folder/LreUGTMOxtjPvvxAUWKVSMrdjkckME</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
         <members>unfiled$public/Compensation_Approval_Approved</members>
         <members>unfiled$public/Compensation_Approval_Rejected</members>
         <members>unfiled$public/Compensation_Email_Approval_Template</members>
-        <members>unfiled$public/Compensation_Email_Template</members>
+        <members>unfiled$public/Compensation_Email_Notification</members>
         <name>EmailTemplate</name>
     </types>
     <types>
-        <members>Home</members>
-        <name>FlexiPage</name>
+        <members>*</members>
+        <name>Flow</name>
     </types>
     <types>
-        <members>Compensation__c-Compensation Layout</members>
-        <members>Compensation__c-Research</members>
-        <members>Compensation__c-Salary</members>
-        <members>Compensation__c-Study</members>
-        <members>Contact-Contact Layout</members>
+        <members>Compensation__c-Research Layout</members>
+        <members>Compensation__c-Salary Layout</members>
+        <members>Compensation__c-Study Layout</members>
         <name>Layout</name>
     </types>
     <types>
         <members>unfiled$public</members>
-        <members>unfiled$public/Compensation_Report</members>
+        <members>unfiled$public/Compensation_Report_N5C</members>
         <name>Report</name>
     </types>
     <types>
         <members>*</members>
         <name>ReportType</name>
+    </types>
+    <types>
+        <members>Compensation__c</members>
+        <name>SharingRules</name>
     </types>
     <types>
         <members>Compensation__c</members>

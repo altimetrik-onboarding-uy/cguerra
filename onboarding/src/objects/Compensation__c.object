@@ -42,15 +42,19 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Compensation_List_View</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
+    <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>false</enableActivities>
+    <deploymentStatus>InDevelopment</deploymentStatus>
+    <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
@@ -58,10 +62,12 @@
     <fields>
         <fullName>Amount__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>It can&apos;t be over $5,000</inlineHelpText>
         <label>Amount</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
@@ -70,6 +76,7 @@
         <externalId>false</externalId>
         <label>Description</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
     </fields>
@@ -78,6 +85,7 @@
         <externalId>false</externalId>
         <label>Details</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
     </fields>
@@ -90,6 +98,7 @@
         <relationshipLabel>Compensations</relationshipLabel>
         <relationshipName>Compensations</relationshipName>
         <required>true</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -98,13 +107,14 @@
         <externalId>false</externalId>
         <label>End Date</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
     <fields>
         <fullName>Job_Category__c</fullName>
         <externalId>false</externalId>
-        <inlineHelpText>Select your job category from the list or select other to enter another one.</inlineHelpText>
+        <inlineHelpText>Select your job category from the list or select other to enter another one</inlineHelpText>
         <label>Job Category</label>
         <picklist>
             <picklistValues>
@@ -127,6 +137,7 @@
             <sorted>false</sorted>
         </picklist>
         <required>true</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -151,6 +162,7 @@
             <sorted>false</sorted>
         </picklist>
         <required>true</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -189,6 +201,7 @@
             <sorted>false</sorted>
         </picklist>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -197,6 +210,7 @@
         <externalId>false</externalId>
         <label>Start Date</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
@@ -225,6 +239,7 @@
             <sorted>false</sorted>
         </picklist>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -232,20 +247,23 @@
         <fullName>Submitted__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
+        <inlineHelpText>Checked means it is ready for management approval.</inlineHelpText>
         <label>Submitted</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Tax__c</fullName>
-        <description>Tax is the 22% of the amount.</description>
         <externalId>false</externalId>
         <formula>Amount__c * 0.22</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The tax is 22% of the amount</inlineHelpText>
         <label>Tax</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
@@ -253,23 +271,31 @@
     <label>Compensation</label>
     <listViews>
         <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Personalized</fullName>
         <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
         <columns>Employee__c</columns>
         <columns>Job_Category__c</columns>
         <columns>Location__c</columns>
         <columns>Submitted__c</columns>
         <columns>Status__c</columns>
         <filterScope>Mine</filterScope>
-        <label>All</label>
+        <label>Personalized</label>
     </listViews>
     <nameField>
         <label>Compensation Name</label>
+        <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
     <pluralLabel>Compensations</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
         <fullName>Research</fullName>
-        <active>false</active>
+        <active>true</active>
         <label>Research</label>
         <picklistValues>
             <picklist>Job_Category__c</picklist>
@@ -431,7 +457,7 @@
     </recordTypes>
     <recordTypes>
         <fullName>Study</fullName>
-        <active>false</active>
+        <active>true</active>
         <label>Study</label>
         <picklistValues>
             <picklist>Job_Category__c</picklist>
@@ -511,14 +537,10 @@
         </picklistValues>
     </recordTypes>
     <searchLayouts>
-        <customTabListAdditionalFields>Employee__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Job_Category__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Location__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Submitted__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
         <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Job_Category__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Employee__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Submitted__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
     </searchLayouts>
@@ -526,22 +548,22 @@
     <validationRules>
         <fullName>Amount_Rule</fullName>
         <active>true</active>
-        <errorConditionFormula>Amount__c  &gt; 5000.00</errorConditionFormula>
+        <errorConditionFormula>Amount__c  &gt;  5000</errorConditionFormula>
         <errorDisplayField>Amount__c</errorDisplayField>
-        <errorMessage>The amount can&apos;t be over $5,000</errorMessage>
+        <errorMessage>The amount  must be less than $5,000</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>End_Date_Rule</fullName>
         <active>true</active>
         <errorConditionFormula>Start_Date__c  &gt;  End_Date__c</errorConditionFormula>
-        <errorMessage>End Date must be equal or greater than Start Date</errorMessage>
+        <errorDisplayField>End_Date__c</errorDisplayField>
+        <errorMessage>The End date has to be equal or greater than the Start Date</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>Other_Details_Rule</fullName>
         <active>true</active>
         <errorConditionFormula>(TEXT( Job_Category__c ) == &apos;Other&apos; &amp;&amp; ISBLANK( Details__c )) || 
 (TEXT(Job_Category__c) != &apos;Other&apos; &amp;&amp; NOT(ISBLANK(Details__c)))</errorConditionFormula>
-        <errorDisplayField>Details__c</errorDisplayField>
-        <errorMessage>You must fill the field Details if Job Category field is others</errorMessage>
+        <errorMessage>Please enter the other Job Category</errorMessage>
     </validationRules>
 </CustomObject>

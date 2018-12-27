@@ -1,1 +1,2 @@
-The {!Compensation__c.Name} has been assigned to you for approval
+The {!Compensation__c.Employee__c} create a compensations and needs your approval, click here:
+{!Compensation__c.Link}

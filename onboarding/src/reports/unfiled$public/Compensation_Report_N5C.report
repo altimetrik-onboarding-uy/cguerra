@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Compensations__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Compensations__r$RecordType</field>
+    </columns>
+    <columns>
+        <field>Contact.Compensations__r$Job_Category__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Compensations__r$Office__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Compensations__r$Status__c</field>
+    </columns>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Compensations__r$Location__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Compensations__r$Employee__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Compensation Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Compensation_Report_Type__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+</Report>

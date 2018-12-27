@@ -1,0 +1,18 @@
+<aura:component controller="CompensationController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<!-- attributes -->
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    
+    <aura:attribute name="isLoading" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInitComp}"/>
+    
+    <lightning:datatable class="slds-table_striped"
+                keyField="id"
+                data="{! v.data }"
+                columns="{! v.columns }"
+                hideCheckboxColumn="true"
+                onrowaction="{! c.handleRowAction }"
+                />
+    
+</aura:component>

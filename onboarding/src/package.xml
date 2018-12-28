@@ -10,6 +10,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>ApprovalProcess</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
@@ -38,6 +42,7 @@
         <name>Flow</name>
     </types>
     <types>
+        <members>Compensation__c-Compensation Layout</members>
         <members>Compensation__c-Research Layout</members>
         <members>Compensation__c-Salary Layout</members>
         <members>Compensation__c-Study Layout</members>

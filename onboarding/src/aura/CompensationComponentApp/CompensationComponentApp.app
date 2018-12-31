@@ -1,4 +1,4 @@
 <aura:application extends="force:slds" >
     <c:HeaderCompensationComponent />
-    <c:CompensationComponent />
+    <c:CompensationComponent/>
 </aura:application>

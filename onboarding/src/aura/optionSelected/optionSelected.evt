@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Pass the type selected from user">
+    <aura:attribute name="optionSelected" type="String" default="All compensations"/>
+</aura:event>

@@ -1,47 +1,55 @@
-<aura:component controller="CompensationController">
+<aura:component>
     
-    <aura:attribute name="data" type="list"/>
-    <aura:attribute name="selected" type="String"/>
+    <aura:attribute name="value" type="Compensation__c"/>
+
     
-	<aura:handler event="c:optionSelected" value="{!this}" action="{!c.getSelected}"/> 
+    <td class="slds-cell-edit slds-cell-error" role="gridcell">
+        <span class="slds-row-number slds-text-body_small slds-text-color_weak"></span>
+    </td>
     
+    <td role="gridcell">
+        <div class="slds-truncate" title="{!v.value.Employee__r.Name}"><a class="slds-th__action" href="javascript:void(0);" role="button" tabindex="-1" onclick="{!c.doEdit}">
+            {!v.value.Employee__r.Name}
+            </a></div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{!v.value.Employee__r.Birthdate}">
+            <lightning:formattedDateTime value="{!v.value.Employee__r.Birthdate}" year="numeric"
+                                         month="long" day="2-digit"/></div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{!v.value.Job_Category__c }">
+            {!v.value.Job_Category__c }</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{!v.value.RecordType.Name}">
+            {!v.value.RecordType.Name}</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{!v.value.Amount__c}">
+            {!v.value.Amount__c }</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{!v.value.Location__c}">
+            {!v.value.Location__c }</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{!v.value.Office__c}">
+            {!v.value.Office__c }</div>
+    </td>
+    <td role="gridcell">
+        
+        
+        <lightning:input type="checkbox" label="" name="input2" checked="{!v.value.Submitted__c }"/>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{!v.value.Status__c}">
+            {!v.value.Status__c }</div>
+    </td>
+    <td class="slds-cell-edit" role="gridcell">
+        <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="More actions for salesforce.com - 1,000 Widgets">
+            <lightning:buttonIcon iconName="utility:down" variant="bare" alternativeText="View More" />
+        </button>
+    </td>
     
-    <aura:iteration items="{!v.data}" var="value">
-        <td role="gridcell">
-            <div class="slds-truncate" title="{!value.Employee__r.Name}">
-                {!value.Employee__r.Name}</div>
-        </td>
-        <td role="gridcell">
-            <div class="slds-truncate" title="{!value.Employee__r.Birthday}">
-                {!value.Employee__r.Birthday}</div>
-        </td>
-        <td role="gridcell">
-            <div class="slds-truncate" title="{!value.Job_Category__c }">
-                {!value.Job_Category__c }</div>
-        </td>
-        <td role="gridcell">
-            <div class="slds-truncate" title="{!value.RecordType__r.Name}">
-                {!value.RecordType__r.Name}</div>
-        </td>
-        <td role="gridcell">
-            <div class="slds-truncate" title="{!value.Amount__c}">
-                {!value.Amount__c }</div>
-        </td>
-        <td role="gridcell">
-            <div class="slds-truncate" title="{!value.Location__c}">
-                {!value.Location__c }</div>
-        </td>
-        <td role="gridcell">
-            <div class="slds-truncate" title="{!value.Office__c}">
-                {!value.Office__c }</div>
-        </td>
-        <td role="gridcell">
-            <div class="slds-truncate" title="{!value.Submitted__c}">
-                {!value.Submitted__c }</div>
-        </td>
-        <td role="gridcell">
-            <div class="slds-truncate" title="{!value.Status__c}">
-                {!value.Status__c }</div>
-        </td>
-    </aura:iteration>
 </aura:component>

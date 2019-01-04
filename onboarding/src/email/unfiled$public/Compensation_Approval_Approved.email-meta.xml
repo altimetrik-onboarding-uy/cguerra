@@ -6,4 +6,5 @@
     <style>none</style>
     <subject>Compensation approved</subject>
     <type>text</type>
+    <uiType>Aloha</uiType>
 </EmailTemplate>

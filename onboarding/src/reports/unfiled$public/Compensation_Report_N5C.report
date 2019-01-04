@@ -34,4 +34,6 @@
     <reportType>Compensation_Report_Type__c</reportType>
     <scope>user</scope>
     <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
 </Report>

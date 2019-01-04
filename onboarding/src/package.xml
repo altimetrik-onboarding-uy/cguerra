@@ -17,8 +17,11 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
+        <members>Compensations</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
         <members>Compensation__c</members>
-        <members>Contact</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -38,8 +41,16 @@
         <name>EmailTemplate</name>
     </types>
     <types>
+        <members>Compensation_List_View</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
         <members>*</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FlowDefinition</name>
     </types>
     <types>
         <members>Compensation__c-Compensation Layout</members>
@@ -59,11 +70,11 @@
     </types>
     <types>
         <members>Compensation__c</members>
-        <name>SharingRules</name>
+        <name>TopicsForObjects</name>
     </types>
     <types>
         <members>Compensation__c</members>
         <name>Workflow</name>
     </types>
-    <version>36.0</version>
+    <version>44.0</version>
 </Package>

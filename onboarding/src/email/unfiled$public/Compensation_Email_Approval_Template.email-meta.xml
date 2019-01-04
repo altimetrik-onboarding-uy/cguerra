@@ -6,4 +6,5 @@
     <style>none</style>
     <subject>Need for approval</subject>
     <type>text</type>
+    <uiType>Aloha</uiType>
 </EmailTemplate>

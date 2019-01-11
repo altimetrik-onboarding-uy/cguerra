@@ -1,14 +1,19 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
-    
+    <!--Attributes for the selects-->
     <aura:attribute name="rtypes" type="String[]" default="All compensations,Salary,Study,Research"/>
-     <aura:registerEvent name="optSelected" type="c:optionSelected"/>
+    <aura:attribute name="optSub" type="String[]" default="None, SUBMITTED, NOT SUBMITTED"/>
+    
+
+    <!--Attribute for the event fire with the selects-->
+    <aura:registerEvent name="optSelected" type="c:optionSelected"/>
+    
     
     <div class="slds-page-header slds-page-header_record-home">
         <div class="slds-page-header__row">
             <div class="slds-page-header__col-title">
                 <div class="slds-media">
                     <div class="slds-media__figure">
-                        <lightning:icon iconName="action:description" alternativeText="Click to Call" size="small"/>
+                        <lightning:icon iconName="action:description" alternativeText="" size="small"/>
                     </div>
                     <div class="slds-media__body">
                         <div class="slds-page-header__name">
@@ -23,16 +28,30 @@
             </div>
             <div class="slds-page-header__col-actions">
                 <div class="slds-page-header__control">
-                    <ul class="slds-button-group-list">
-                        <li>
+                    
+                    <ul class="slds-button-group-list slds-grid">
+                       
+                        <li class="slds-col">
                             <div class="slds-form-element">
                                 <div class="slds-form-element__control">
                                     <div class="slds-select_container">
-                                        <lightning:select aura:id="select" name="select" label="Select a type:" onchange="{! c.onChange }">
+                                        <lightning:select aura:id="recordTOpt" name="recordTOpt" label="Select a status:" onchange="{! c.onChange }">
                                             <aura:iteration items="{!v.rtypes}" var="item">
                                                 <option>{!item}</option>
                                             </aura:iteration>
-                                            
+                                        </lightning:select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slds-col">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <div class="slds-select_container">
+                                        <lightning:select aura:id="statusOpt" name="statusOpt" label="Select a type:" onchange="{! c.onChange }">
+                                            <aura:iteration items="{!v.optSub}" var="item">
+                                                <option>{!item}</option>
+                                            </aura:iteration>
                                         </lightning:select>
                                     </div>
                                 </div>
@@ -40,6 +59,7 @@
                         </li>
                         
                     </ul>
+                    
                 </div>
             </div>
         </div>

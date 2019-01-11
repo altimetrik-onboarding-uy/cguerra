@@ -1,56 +1,21 @@
 ({ 
-    init : function(component, event, helper) {
-        helper.doInit(component, event);
+    getSelected : function(component, event, helper) {
+        helper.doSelected(component, event);
     },
-    getSelected : function(component, event) {
-        var opt = event.getParam('optionSelected');
-        console.log(opt);
-        if(opt === 'All compensations'){
-            var action = component.get('c.AllRecordType');
-            action.setCallback(this, function(response){
-                var state = response.getState();
-                var resp = response.getReturnValue();
-                
-                if (state === "SUCCESS") {
-                    component.set("v.data", resp );
-                }else if (state === "ERROR") {
-                        var errors = response.getError();
-                        if (errors) {
-                            if (errors[0] && errors[0].message) {
-                                console.log("Error message: " + 
-                                            errors[0].message);
-                            }
-                        } else {
-                            console.log("Unknown error");
-                        }
-                    }
-                
-            });
-            $A.enqueueAction(action);
-        }else{
-            var action = component.get('c.SpecificRecodType');
-            console.log(opt);
-            action.setParam('type', opt);
-            action.setCallback(this, function(response){
-                var state = response.getState();
-                var resp = response.getReturnValue();
-                console.log(resp);
-                if (state === "SUCCESS") {
-                    component.set("v.data", resp );
-                }else if (state === "ERROR") {
-                        var errors = response.getError();
-                        if (errors) {
-                            if (errors[0] && errors[0].message) {
-                                console.log("Error message: " + 
-                                            errors[0].message);
-                            }
-                        } else {
-                            console.log("Unknown error");
-                        }
-                    }
-            });
-            $A.enqueueAction(action);
-        }
+    
+    
+    downloadCsv : function(component,event,helper){
+        var stockData = component.get("v.data");
+        
+        var csv = helper.convertArrayOfObjectsToCSV(component,stockData);   
+        if (csv == null){return;} 
+        
+        var hiddenElement = document.createElement('a');
+        hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+        hiddenElement.target = '_self';
+        hiddenElement.download = 'ExportData.csv';
+        document.body.appendChild(hiddenElement); 
+        hiddenElement.click();
     }
     
 })

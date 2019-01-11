@@ -1,9 +1,12 @@
-<aura:component>
+<aura:component controller="CompensationController">
     
     <aura:attribute name="value" type="Compensation__c"/>
-
+    
     
     <td class="slds-cell-edit slds-cell-error" role="gridcell">
+        <button id="error-01" class="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden" aria-hidden="true" tabindex="-1" title="Item 1 has errors">
+            <lightning:buttonIcon iconName="utility:error" />
+        </button>
         <span class="slds-row-number slds-text-body_small slds-text-color_weak"></span>
     </td>
     
@@ -38,18 +41,13 @@
             {!v.value.Office__c }</div>
     </td>
     <td role="gridcell">
-        
-        
-        <lightning:input type="checkbox" label="" name="input2" checked="{!v.value.Submitted__c }"/>
+        <lightning:input id="{!v.value.Id }" type="checkbox" label="" name="submitted" 
+                         checked="{!v.value.Submitted__c }" onclick="{!c.chckSelect}" disabled ="{!v.value.Submitted__c }"/>
     </td>
+    
     <td role="gridcell">
         <div class="slds-truncate" title="{!v.value.Status__c}">
             {!v.value.Status__c }</div>
-    </td>
-    <td class="slds-cell-edit" role="gridcell">
-        <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="More actions for salesforce.com - 1,000 Widgets">
-            <lightning:buttonIcon iconName="utility:down" variant="bare" alternativeText="View More" />
-        </button>
     </td>
     
 </aura:component>

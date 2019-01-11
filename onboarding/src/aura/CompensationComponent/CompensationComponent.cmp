@@ -3,15 +3,19 @@
     
     <aura:attribute name="data" type="Compensation__c[]"/>
     
-    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:handler name="init" value="{!this}" action="{! c.getSelected }"/>
+   
     
+    <!-- attribute for event action-->
     <aura:handler event="c:optionSelected" action="{!c.getSelected}"/>
-    
-    
+    <article class="slds-card slds-m-top_small">
+    <div class="slds-float_right slds-m-around_small">
+        <lightning:button label="Download" variant="brand" iconName="utility:download" onclick="{!c.downloadCsv}"/>
+    </div>
     <table aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
         <thead>
             <tr class="slds-line-height_reset">
-                <th class="slds-text-title_caps" scope="col" style="width: 3.75rem;">
+                <th class="" scope="col" style="width: 3.75rem;">
                     <div class="slds-truncate slds-assistive-text" title="Errors">Errors</div>
                 </th>
                 
@@ -63,10 +67,6 @@
                         <span class="slds-truncate" title="Status">Status</span>
                     </div>
                 </th>
-                
-                <th class="slds-text-title_caps" scope="col" style="width: 3.25rem;">
-                    <div class="slds-truncate slds-assistive-text" title="Actions">Actions</div>
-                </th>
             </tr>
         </thead>
         <tbody>
@@ -78,4 +78,5 @@
             </aura:iteration>
         </tbody>
     </table>
+    </article>
 </aura:component>

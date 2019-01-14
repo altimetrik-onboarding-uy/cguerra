@@ -1,6 +1,6 @@
 global class BatchCompensationSubmitted implements Database.Batchable<sObject> {
    
-   public String query = 'SELECT Id, Submitted__c, CreatedDate FROM Compensation__c Where CreatedDate < LAST_N_DAYS:2';
+   public String query = 'SELECT Id, Submitted__c, CreatedDate FROM Compensation__c Where Submitted__c = false AND CreatedDate < LAST_N_DAYS:2';
    
 
    global Database.QueryLocator start(Database.BatchableContext BC){
@@ -12,6 +12,7 @@ global class BatchCompensationSubmitted implements Database.Batchable<sObject> {
        for (sObject item: scope) {
           Compensation__c comp = (Compensation__c)item;
           comp.Submitted__c = true;
+           system.debug(comp);
           }
       
       update scope;

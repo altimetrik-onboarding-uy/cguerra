@@ -17,11 +17,8 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
-        <members>Compensations</members>
-        <name>CustomApplication</name>
-    </types>
-    <types>
         <members>Compensation__c</members>
+        <members>Contact</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -50,16 +47,13 @@
         <members>Compensation__c-Research Layout</members>
         <members>Compensation__c-Salary Layout</members>
         <members>Compensation__c-Study Layout</members>
+        <members>Contact-Contact %28Marketing%29 Layout</members>
+        <members>Contact-Contact %28Sales%29 Layout</members>
         <name>Layout</name>
     </types>
     <types>
-        <members>unfiled$public</members>
-        <members>unfiled$public/Compensation_Report_N5C</members>
-        <name>Report</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ReportType</name>
+        <members>Compensation__c</members>
+        <name>Workflow</name>
     </types>
     <version>44.0</version>
 </Package>

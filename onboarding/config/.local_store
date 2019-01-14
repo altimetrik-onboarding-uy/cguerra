@@ -83,20 +83,6 @@
         "type": "AuraDefinitionBundle",
         "mmState": "clean"
     },
-    "CompensationComponentApp/CompensationComponentApp.app.undefined": {
-        "createdById": "0051U000001ulkXQAQ",
-        "createdByName": "Celia Guerra",
-        "createdDate": "2018-12-21T00:32:36.000Z",
-        "fileName": "unpackaged/aura/CompensationComponentApp/CompensationComponentApp.app",
-        "fullName": "CompensationComponentApp/CompensationComponentApp.app",
-        "id": "0Ad1U000001N3AhSAK",
-        "lastModifiedById": "0051U000001ulkXQAQ",
-        "lastModifiedByName": "Celia Guerra",
-        "lastModifiedDate": "2018-12-31T11:39:05.000Z",
-        "manageableState": "unmanaged",
-        "type": "AuraDefinitionBundle",
-        "mmState": "clean"
-    },
     "HeaderCompensationComponent/HeaderCompensationComponent.cmp.undefined": {
         "createdById": "0051U000001ulkXQAQ",
         "createdByName": "Celia Guerra",
@@ -107,20 +93,6 @@
         "lastModifiedById": "0051U000001ulkXQAQ",
         "lastModifiedByName": "Celia Guerra",
         "lastModifiedDate": "2019-01-10T19:36:53.000Z",
-        "manageableState": "unmanaged",
-        "type": "AuraDefinitionBundle",
-        "mmState": "clean"
-    },
-    "CompensationComponentApp/CompensationComponentAppController.js.undefined": {
-        "createdById": "0051U000001ulkXQAQ",
-        "createdByName": "Celia Guerra",
-        "createdDate": "2018-12-21T02:02:50.000Z",
-        "fileName": "unpackaged/aura/CompensationComponentApp/CompensationComponentAppController.js",
-        "fullName": "CompensationComponentApp/CompensationComponentAppController.js",
-        "id": "0Ad1U000001N3efSAC",
-        "lastModifiedById": "0051U000001ulkXQAQ",
-        "lastModifiedByName": "Celia Guerra",
-        "lastModifiedDate": "2018-12-21T03:25:56.000Z",
         "manageableState": "unmanaged",
         "type": "AuraDefinitionBundle",
         "mmState": "clean"
@@ -237,32 +209,17 @@
         "type": "CustomObject",
         "mmState": "clean"
     },
-    "Compensation_Report_Type.reportType": {
+    "Contact.object": {
         "createdById": "0051U000001ulkXQAQ",
         "createdByName": "Celia Guerra",
-        "createdDate": "2018-12-20T19:47:03.000Z",
-        "fileName": "unpackaged/reportTypes/Compensation_Report_Type.reportType",
-        "fullName": "Compensation_Report_Type",
-        "id": "0701U000000piOGQAY",
+        "createdDate": "2019-01-14T18:23:12.907Z",
+        "fileName": "unpackaged/objects/Contact.object",
+        "fullName": "Contact",
+        "id": "000000000000000AAA",
         "lastModifiedById": "0051U000001ulkXQAQ",
         "lastModifiedByName": "Celia Guerra",
-        "lastModifiedDate": "2018-12-20T19:50:21.000Z",
-        "manageableState": "unmanaged",
-        "type": "ReportType",
-        "mmState": "clean"
-    },
-    "unfiled$public/Compensation_Report_N5C.report": {
-        "createdById": "0051U000001ulkXQAQ",
-        "createdByName": "Celia Guerra",
-        "createdDate": "2018-12-20T19:51:49.000Z",
-        "fileName": "unpackaged/reports/unfiled$public/Compensation_Report_N5C.report",
-        "fullName": "unfiled$public/Compensation_Report_N5C",
-        "id": "00O1U0000036ymSUAQ",
-        "lastModifiedById": "0051U000001ulkXQAQ",
-        "lastModifiedByName": "Celia Guerra",
-        "lastModifiedDate": "2018-12-20T19:52:14.000Z",
-        "manageableState": "unmanaged",
-        "type": "Report",
+        "lastModifiedDate": "2019-01-14T18:23:12.907Z",
+        "type": "CustomObject",
         "mmState": "clean"
     },
     "Public_Folder/LreUGTMOxtjPvvxAUWKVSMrdjkckME.dashboard": {
@@ -303,6 +260,34 @@
         "lastModifiedById": "0051U000001ulkXQAQ",
         "lastModifiedByName": "Celia Guerra",
         "lastModifiedDate": "2018-12-20T20:00:17.000Z",
+        "manageableState": "unmanaged",
+        "type": "Layout",
+        "mmState": "clean"
+    },
+    "Contact-Contact %28Marketing%29 Layout.layout": {
+        "createdById": "0051U000001ulkXQAQ",
+        "createdByName": "Celia Guerra",
+        "createdDate": "2018-12-19T22:50:01.000Z",
+        "fileName": "unpackaged/layouts/Contact-Contact %28Marketing%29 Layout.layout",
+        "fullName": "Contact-Contact %28Marketing%29 Layout",
+        "id": "00h1U000002TgLuQAK",
+        "lastModifiedById": "0051U000001ulkXQAQ",
+        "lastModifiedByName": "Celia Guerra",
+        "lastModifiedDate": "2018-12-20T12:44:19.000Z",
+        "manageableState": "unmanaged",
+        "type": "Layout",
+        "mmState": "clean"
+    },
+    "Contact-Contact %28Sales%29 Layout.layout": {
+        "createdById": "0051U000001ulkXQAQ",
+        "createdByName": "Celia Guerra",
+        "createdDate": "2018-12-19T22:50:01.000Z",
+        "fileName": "unpackaged/layouts/Contact-Contact %28Sales%29 Layout.layout",
+        "fullName": "Contact-Contact %28Sales%29 Layout",
+        "id": "00h1U000002TgLvQAK",
+        "lastModifiedById": "0051U000001ulkXQAQ",
+        "lastModifiedByName": "Celia Guerra",
+        "lastModifiedDate": "2018-12-20T12:44:19.000Z",
         "manageableState": "unmanaged",
         "type": "Layout",
         "mmState": "clean"
@@ -391,20 +376,6 @@
         "type": "CustomTab",
         "mmState": "clean"
     },
-    "Compensations.app": {
-        "createdById": "0051U000001ulkXQAQ",
-        "createdByName": "Celia Guerra",
-        "createdDate": "2018-12-20T12:53:18.000Z",
-        "fileName": "unpackaged/applications/Compensations.app",
-        "fullName": "Compensations",
-        "id": "02u1U0000015opYQAQ",
-        "lastModifiedById": "0051U000001ulkXQAQ",
-        "lastModifiedByName": "Celia Guerra",
-        "lastModifiedDate": "2018-12-21T08:15:20.000Z",
-        "manageableState": "unmanaged",
-        "type": "CustomApplication",
-        "mmState": "clean"
-    },
     "SubmitAllComp.flow": {
         "createdById": "0051U000001ulkXQAQ",
         "createdByName": "Celia Guerra",
@@ -461,6 +432,20 @@
         "type": "FlowDefinition",
         "mmState": "clean"
     },
+    "Update_Status_Process.flowDefinition": {
+        "createdById": "0051U000001ulkXQAQ",
+        "createdByName": "Celia Guerra",
+        "createdDate": "2018-12-20T20:33:09.000Z",
+        "fileName": "unpackaged/flowDefinitions/Update_Status_Process.flowDefinition",
+        "fullName": "Update_Status_Process",
+        "id": "3001U00000065RfQAI",
+        "lastModifiedById": "0051U000001ulkXQAQ",
+        "lastModifiedByName": "Celia Guerra",
+        "lastModifiedDate": "2019-01-08T18:14:51.000Z",
+        "manageableState": "unmanaged",
+        "type": "FlowDefinition",
+        "mmState": "clean"
+    },
     "SubmitAllComp.flowDefinition": {
         "createdById": "0051U000001ulkXQAQ",
         "createdByName": "Celia Guerra",
@@ -475,18 +460,18 @@
         "type": "FlowDefinition",
         "mmState": "clean"
     },
-    "Update_Status_Process.flowDefinition": {
+    "Compensation__c.workflow": {
         "createdById": "0051U000001ulkXQAQ",
         "createdByName": "Celia Guerra",
-        "createdDate": "2018-12-20T20:33:09.000Z",
-        "fileName": "unpackaged/flowDefinitions/Update_Status_Process.flowDefinition",
-        "fullName": "Update_Status_Process",
-        "id": "3001U00000065RfQAI",
+        "createdDate": "2018-12-20T12:35:36.000Z",
+        "fileName": "unpackaged/workflows/Compensation__c.workflow",
+        "fullName": "Compensation__c",
+        "id": "01I1U000001ASEPUA4",
         "lastModifiedById": "0051U000001ulkXQAQ",
         "lastModifiedByName": "Celia Guerra",
-        "lastModifiedDate": "2019-01-08T18:14:51.000Z",
+        "lastModifiedDate": "2018-12-20T12:35:36.000Z",
         "manageableState": "unmanaged",
-        "type": "FlowDefinition",
+        "type": "Workflow",
         "mmState": "clean"
     },
     "Compensation__c.Compensation_Approval_Process.approvalProcess": {
@@ -502,6 +487,20 @@
         "type": "ApprovalProcess",
         "mmState": "clean"
     },
+    "scheduleCompensationBatch.cls": {
+        "createdById": "0051U000001ulkXQAQ",
+        "createdByName": "Celia Guerra",
+        "createdDate": "2019-01-14T17:38:47.000Z",
+        "fileName": "unpackaged/classes/scheduleCompensationBatch.cls",
+        "fullName": "scheduleCompensationBatch",
+        "id": "01p1U00000BtGgWQAV",
+        "lastModifiedById": "0051U000001ulkXQAQ",
+        "lastModifiedByName": "Celia Guerra",
+        "lastModifiedDate": "2019-01-14T17:39:02.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    },
     "TestDataFactory.cls": {
         "createdById": "0051U000001ulkXQAQ",
         "createdByName": "Celia Guerra",
@@ -512,34 +511,6 @@
         "lastModifiedById": "0051U000001ulkXQAQ",
         "lastModifiedByName": "Celia Guerra",
         "lastModifiedDate": "2019-01-11T20:43:34.000Z",
-        "manageableState": "unmanaged",
-        "type": "ApexClass",
-        "mmState": "clean"
-    },
-    "scheduleCompensation.cls": {
-        "createdById": "0051U000001ulkXQAQ",
-        "createdByName": "Celia Guerra",
-        "createdDate": "2019-01-11T21:49:51.000Z",
-        "fileName": "unpackaged/classes/scheduleCompensation.cls",
-        "fullName": "scheduleCompensation",
-        "id": "01p1U00000BUBGgQAP",
-        "lastModifiedById": "0051U000001ulkXQAQ",
-        "lastModifiedByName": "Celia Guerra",
-        "lastModifiedDate": "2019-01-11T22:00:59.000Z",
-        "manageableState": "unmanaged",
-        "type": "ApexClass",
-        "mmState": "clean"
-    },
-    "CompensationControllerTest.cls": {
-        "createdById": "0051U000001ulkXQAQ",
-        "createdByName": "Celia Guerra",
-        "createdDate": "2019-01-02T19:52:32.000Z",
-        "fileName": "unpackaged/classes/CompensationControllerTest.cls",
-        "fullName": "CompensationControllerTest",
-        "id": "01p1U000009j9moQAA",
-        "lastModifiedById": "0051U000001ulkXQAQ",
-        "lastModifiedByName": "Celia Guerra",
-        "lastModifiedDate": "2019-01-11T20:48:12.000Z",
         "manageableState": "unmanaged",
         "type": "ApexClass",
         "mmState": "clean"
@@ -558,6 +529,20 @@
         "type": "ApexClass",
         "mmState": "clean"
     },
+    "CompensationControllerTest.cls": {
+        "createdById": "0051U000001ulkXQAQ",
+        "createdByName": "Celia Guerra",
+        "createdDate": "2019-01-02T19:52:32.000Z",
+        "fileName": "unpackaged/classes/CompensationControllerTest.cls",
+        "fullName": "CompensationControllerTest",
+        "id": "01p1U000009j9moQAA",
+        "lastModifiedById": "0051U000001ulkXQAQ",
+        "lastModifiedByName": "Celia Guerra",
+        "lastModifiedDate": "2019-01-11T20:48:12.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    },
     "BatchCompensationSubmitted.cls": {
         "createdById": "0051U000001ulkXQAQ",
         "createdByName": "Celia Guerra",
@@ -567,7 +552,7 @@
         "id": "01p1U00000BSwx3QAD",
         "lastModifiedById": "0051U000001ulkXQAQ",
         "lastModifiedByName": "Celia Guerra",
-        "lastModifiedDate": "2019-01-11T19:41:01.000Z",
+        "lastModifiedDate": "2019-01-14T17:40:27.000Z",
         "manageableState": "unmanaged",
         "type": "ApexClass",
         "mmState": "clean"

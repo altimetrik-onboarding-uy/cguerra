@@ -1,18 +1,82 @@
 <aura:component controller="CompensationController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
-	<!-- attributes -->
-    <aura:attribute name="data" type="Object"/>
-    <aura:attribute name="columns" type="List"/>
+    <!-- attributes -->
     
-    <aura:attribute name="isLoading" type="Boolean" default="false"/>
+    <aura:attribute name="data" type="Compensation__c[]"/>
     
-    <aura:handler name="init" value="{!this}" action="{!c.doInitComp}"/>
+    <aura:handler name="init" value="{!this}" action="{! c.getSelected }"/>
+   
     
-    <lightning:datatable class="slds-table_striped"
-                keyField="id"
-                data="{! v.data }"
-                columns="{! v.columns }"
-                hideCheckboxColumn="true"
-                onrowaction="{! c.handleRowAction }"
-                />
-    
+    <!-- attribute for event action-->
+    <aura:handler event="c:optionSelected" action="{!c.getSelected}"/>
+    <article class="slds-card slds-m-top_small">
+    <div class="slds-float_right slds-m-around_small">
+        <lightning:button label="Download" variant="brand" iconName="utility:download" onclick="{!c.downloadCsv}"/>
+    </div>
+    <table aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col" style="width: 3.75rem;">
+                    <div class="slds-truncate slds-assistive-text" title="Errors">Errors</div>
+                </th>
+                
+                <th aria-label="Employee's name" aria-sort="none" class="slds-text-title_caps" scope="col">
+                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate" title="Employee's name">Employee's name</span>
+                        </div>
+                    </a>
+                    
+                </th>
+                <th aria-label="Employee's date of birth" aria-sort="none" class="slds-text-title_caps" scope="col">                    
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-truncate" title="Employee's date of birth">Date of birth</span>
+                    </div>
+                </th>
+                <th aria-label="Job Category" aria-sort="none" class="slds-text-title_caps" scope="col">                    
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-truncate" title="Job Category">Job Category</span>
+                    </div>
+                </th>
+                <th aria-label="Compensation Type" aria-sort="none" class="slds-text-title_caps" scope="col">                    
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-truncate" title="Compensation Type">Compensation Type</span>
+                    </div>
+                </th>
+                <th aria-label="Amount" aria-sort="none" class="slds-text-title_caps" scope="col">                    
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-truncate" title="Amount">Amount</span>
+                    </div>
+                </th>
+                <th aria-label="Location" aria-sort="none" class="slds-text-title_caps" scope="col">                    
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-truncate" title="Location">Location</span>
+                    </div>
+                </th>
+                <th aria-label="Office" aria-sort="none" class="slds-text-title_caps" scope="col">                    
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-truncate" title="Office">Office</span>
+                    </div>
+                </th>
+                <th aria-label="Submitted" aria-sort="none" class="slds-text-title_caps" scope="col">                    
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-truncate" title="Submitted">Submitted</span>
+                    </div>
+                </th>
+                <th aria-label="Status" aria-sort="none" class="slds-text-title_caps" scope="col">                    
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-truncate" title="Status">Status</span>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.data}" var="object">
+                
+                <tr>
+                    <c:RowDTComponent value="{!object}"/>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+    </article>
 </aura:component>

@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="compList" type="Compensation__c[]"/>
+</aura:event>

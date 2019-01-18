@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Pass the type selected from user">
+    <aura:attribute name="optionRType" type="String" default="All compensations"/>
+    <aura:attribute name="optionStatus" type="String" default="None"/>
+</aura:event>

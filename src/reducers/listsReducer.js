@@ -5,11 +5,16 @@ const initialState = [
     cards: [
       {
         id: 0,
+<<<<<<< HEAD
         text:
+=======
+        test:
+>>>>>>> 19b59b528499fea27236fc666624eb08f5324695
           'Ea exercitation ullamco laboris sint sint est commodo anim reprehenderit exercitation Lorem ipsum aliquip.'
       },
       {
         id: 1,
+<<<<<<< HEAD
         text: 'Veniam cillum excepteur ut ullamco.'
       }
     ]
@@ -31,6 +36,9 @@ const initialState = [
       {
         id: 2,
         text: 'Ad nisi aute ipsum cillum.'
+=======
+        test: 'Veniam cillum excepteur ut ullamco.'
+>>>>>>> 19b59b528499fea27236fc666624eb08f5324695
       }
     ]
   }

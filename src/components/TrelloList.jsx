@@ -1,6 +1,7 @@
 import React from 'react';
 import TrelloCard from './TrelloCard';
 
+<<<<<<< HEAD
 const TrelloList = ({ title, cards }) => {
   return (
     <div style={styles.container}>
@@ -8,6 +9,13 @@ const TrelloList = ({ title, cards }) => {
       {cards.map(card => (
         <TrelloCard text={card.text} />
       ))}
+=======
+const TrelloList = ({ title }) => {
+  return (
+    <div style={styles.container}>
+      <h4>{title}</h4>
+      <TrelloCard />
+>>>>>>> 19b59b528499fea27236fc666624eb08f5324695
     </div>
   );
 };

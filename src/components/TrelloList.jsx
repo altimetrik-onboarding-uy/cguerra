@@ -1,31 +1,56 @@
 import React from 'react';
 import TrelloCard from './TrelloCard';
+import TrelloActionButton from './TrelloActionButton';
+import { Droppable } from 'react-beautiful-dnd';
+import IconButton from '@material-ui/core/IconButton';
+import Delete from '@material-ui/icons/Delete';
 
-<<<<<<< HEAD
-const TrelloList = ({ title, cards }) => {
+const TrelloList = ({ title, cards, listID, onDelete }) => {
   return (
-    <div style={styles.container}>
-      <h4>{title}</h4>
-      {cards.map(card => (
-        <TrelloCard text={card.text} />
-      ))}
-=======
-const TrelloList = ({ title }) => {
-  return (
-    <div style={styles.container}>
-      <h4>{title}</h4>
-      <TrelloCard />
->>>>>>> 19b59b528499fea27236fc666624eb08f5324695
-    </div>
+    <Droppable droppableId={String(listID)}>
+      {provided => (
+        <div
+          {...provided.droppableProps}
+          ref={provided.innerRef}
+          style={styles.container}
+        >
+          <div>
+            <IconButton
+              onClick={() => onDelete(listID)}
+              style={{
+                float: 'right',
+                display: 'flex'
+              }}
+            >
+              <Delete fontSize='small' />
+            </IconButton>
+          </div>
+          <h4>{title}</h4>
+          {cards.map((card, index) => (
+            <TrelloCard
+              key={index}
+              index={index}
+              title={card.title}
+              id={card.id}
+              description={card.description}
+            />
+          ))}
+          <TrelloActionButton listID={listID} />
+          {provided.placeholder}
+        </div>
+      )}
+    </Droppable>
   );
 };
 
 const styles = {
   container: {
-    backgroundColor: '#ccc',
+    backgroundColor: '#dfe3e6',
     borderRadius: 3,
     width: 300,
-    padding: 5
+    height: '100%',
+    padding: 5,
+    margin: 5
   }
 };
 
